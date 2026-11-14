@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#160b31">
+<title>Every Second Counts · StoryFrame concept</title>
+<meta name="description" content="A returner has about half a second against a big serve. How quick are you? An illustrative StoryFrame partner challenge.">
+<link rel="icon" type="image/png" href="./assets/logomark.png">
+<link rel="stylesheet" href="./story.css?v=atp-1">
+<script src="./experience.config.js?v=atp-1" defer></script><script src="./track.js?v=atp-1" defer></script><script src="./stories.js?v=atp-1" defer></script><script src="./challenge.js?v=atp-1" defer></script>
+</head>
+<body>
+<header class="sp-top"><a class="sp-brand" href="./" aria-label="StoryFrame experience home"><img src="./assets/logomark.png" alt=""><img src="./assets/wordmark.png" alt="StoryFrame"></a><span class="sp-chip">Concept</span></header>
+<main>
+<section class="sp-hero" style="--hero:url('./assets/stories/PP03.webp')" aria-label="Story header">
+ <div class="sp-hero-inner"><p class="sp-partner">Presented by [Partner name] · illustrative</p><p class="sp-kicker">Powered by Partners · Interactive</p><h1>Every Second Counts</h1><p class="sp-sub">Half a second to read a serve. How quick are you?</p></div>
+</section>
+<section class="sp-body">
+ <p class="sp-lead">When Tennis.com timed four serves from doubles specialist Dominic Inglot, the ball reached the returner in 0.5 seconds on average. Tap the court the moment the ball appears. Three serves, best time counts.</p>
+ <div class="card">
+  <button id="court" class="court" type="button" aria-describedby="court-help">
+   <svg viewBox="0 0 400 500" aria-hidden="true" preserveAspectRatio="none"><g fill="none" stroke="#ffffffd9" stroke-width="4"><rect x="40" y="30" width="320" height="440"/><line x1="80" y1="30" x2="80" y2="470"/><line x1="320" y1="30" x2="320" y2="470"/><line x1="80" y1="140" x2="320" y2="140"/><line x1="80" y1="360" x2="320" y2="360"/><line x1="200" y1="140" x2="200" y2="360"/><line x1="200" y1="30" x2="200" y2="42"/><line x1="200" y1="458" x2="200" y2="470"/></g><line x1="22" y1="250" x2="378" y2="250" stroke="#fff" stroke-width="6"/><line x1="22" y1="250" x2="378" y2="250" stroke="#00000055" stroke-width="2" stroke-dasharray="3 5"/></svg>
+   <span class="ball" id="ball" aria-hidden="true"></span>
+   <span class="status" id="status" aria-live="assertive">Tap to start<small>Serve 1 of 3</small></span>
+  </button>
+  <p id="court-help" class="result-note">Tap or press Space when the ball appears. Tapping too early is a fault.</p>
+  <div class="times" id="times" aria-live="polite"><div><span>Serve 1</span><strong>·</strong></div><div><span>Serve 2</span><strong>·</strong></div><div><span>Serve 3</span><strong>·</strong></div></div>
+  <div id="result" hidden></div>
+ </div>
+ <section class="sp-related" aria-labelledby="rel-title"><h2 id="rel-title">Keep exploring</h2><div id="related"></div></section>
+ <p class="sp-note" id="concept-note">An illustrative StoryFrame concept. Not an official ATP or BNP Paribas Open experience.</p>
+</section>
+</main>
+<noscript><p class="sp-body">Please enable JavaScript to play the challenge.</p></noscript>
+</body></html>
