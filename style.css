@@ -29,3 +29,24 @@
 .concept-note{position:absolute;z-index:5;left:8vw;bottom:max(14px,env(safe-area-inset-bottom));margin:0;font-size:11px;letter-spacing:.2px;color:#b9abd0;opacity:0;transition:opacity .8s}
 .reveal.complete .concept-note{opacity:1}
 @media(max-width:700px){.interactive-links{justify-content:center;margin:2px 0}.chip-link{padding:8px 12px;font-size:12.5px}.concept-note{left:0;width:100%;text-align:center;font-size:9.5px;bottom:4px;padding:0 16px}.reveal-actions{bottom:max(30px,calc(env(safe-area-inset-bottom) + 16px))}}
+
+/* Reveal layout: headline and buttons in one column, so they can never overlap (desktop and tablet) */
+.reveal-copy{display:contents}
+@media(min-width:701px){
+.reveal-copy{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(18px,3.2vh,34px);position:absolute;z-index:2;left:8vw;top:50%;transform:translateY(-50%);width:min(680px,calc(62vw - 170px))}
+.reveal-copy .reveal-heading,.reveal-copy .reveal-actions{position:relative;left:auto;top:auto;bottom:auto;width:100%}
+.reveal-heading h2{font-size:clamp(30px,min(3.5vw,6.4vh),60px);line-height:1.03;margin:14px 0 0}
+.reveal-actions{gap:10px}
+}
+@media(orientation:landscape) and (max-height:540px){
+.reveal-copy{left:6vw;top:56%;gap:10px;width:min(46%,420px)}
+.reveal-heading .eyebrow{font-size:10px}
+.reveal-heading h2{font-size:24px;margin:6px 0 0;letter-spacing:-1px}
+.reveal-actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px}
+.reveal-actions .primary{min-height:40px;padding:10px 18px;font-size:14px}
+.interactive-links{margin:0;gap:6px}
+.chip-link{padding:7px 11px;font-size:12px}
+.reveal-actions .text-button{padding:4px 6px;font-size:12px}
+}
+@media(max-width:700px) and (max-height:720px){.phone-wrap{--phone-scale:.5;top:50%}}
+.primary.auto-focus:focus-visible{outline:none}
